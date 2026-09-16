@@ -1,17 +1,17 @@
-#include 
-#include 
-#include 
+#include <iostream>
+#include <vector>
+#include <unordered_map>
 
 using namespace std;
 
 class Solution {
 public:
-    vector twoSum(vector& nums, int target) {
-        unordered_map seen;
+    vector<int> twoSum(vector<int>& nums, int target) {
+        unordered_map<int, int> seen;
         for (int i = 0; i < nums.size(); i++) {
             int diff = target - nums[i];
             if (seen.find(diff) != seen.end()) {
-                return {seen[diff], i};
+                return {seen_diff], i};
             }
             seen[nums[i]] = i;
         }
@@ -21,12 +21,11 @@ public:
 
 int main() {
     Solution sol;
-    vector nums1 = {2, 7, 11, 15};
-    vector res1 = sol.twoSum(nums1, 9);
+    vector<int> nums1 = {2, 7, 11, 15};
+    vector<int> res1 = sol.twoSum(nums1, 9);
     cout << "Test 1: [" << res1[0] << ", " << res1[1] << "]\n";
-
-    vector nums2 = {3, 3};
-    vector res2 = sol.twoSum(nums2, 6);
+    vector<int> nums2 = {3, 3};
+    vector<int> res2 = sol.twoSum(nums2, 6);
     cout << "Test 2: [" << res2[0] << ", " << res2[1] << "]\n";
     return 0;
 }
