@@ -11,7 +11,7 @@ public:
         for (int i = 0; i < nums.size(); i++) {
             int diff = target - nums[i];
             if (seen.find(diff) != seen.end()) {
-                return {seen_diff], i};
+                return {seen[diff], i};
             }
             seen[nums[i]] = i;
         }
