@@ -21,13 +21,13 @@ public:
 
 int main() {
     Solution sol;
-
+    
     // Test Case 1: Standard
     vector nums1 = {2, 7, 11, 15};
     vector res1 = sol.twoSum(nums1, 9);
     cout << "Test 1: [" << res1[0] << ", " << res1[1] << "]\n";
 
-    // Test Case 2: Edge Case
+    // Test Case 2: Duplicates/Edge Case
     vector nums2 = {3, 3};
     vector res2 = sol.twoSum(nums2, 6);
     cout << "Test 2: [" << res2[0] << ", " << res2[1] << "]\n";
