@@ -6,7 +6,7 @@ using namespace std;
 
 class Solution {
 public:
-    vector:int> twoSum(vector<int>& nums, int target) {
+    vector twoSum(vector<int>& nums, int target) {
         unordered_map<int, int> seen;
         for (int i = 0; i < nums.size(); i++) {
             int diff = target - nums[i];
@@ -21,7 +21,7 @@ public:
 
 int main() {
     Solution sol;
-    vector:int> nums1 = {2, 7, 11, 15};
+    vector nums1 = {2, 7, 11, 15};
     vector<int> res1 = sol.twoSum(nums1, 9);
     cout << "Test 1: [" << res1[0] << ", " << res1[1] << "]\n";
     vector<int> nums2 = {3, 3};
